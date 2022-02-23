@@ -28,9 +28,11 @@ jobs:
           LANG: JS
         uses: applibgroup/HarmonyOs-build@v2.7
       - name: install ESLint
-        run: npm install eslint
+        run: |
+             npm install eslint --save-dev
+             npm init @eslint/config
       - name: run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.ts
+        run: ./node_modules/.bin/eslint . --ext .js,.jsx,.ts,.ts
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
