@@ -27,8 +27,10 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           LANG: JS
         uses: applibgroup/HarmonyOs-build@v2.7
-      - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.ts
+      - name: install ESLint
+        run: npm install eslint
+      - name: run ESLint
+      - run: eslint . --ext .js,.jsx,.ts,.ts
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
