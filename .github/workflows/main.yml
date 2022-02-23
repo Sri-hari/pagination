@@ -30,7 +30,7 @@ jobs:
       - name: install ESLint
         run: npm install eslint
       - name: run ESLint
-      - run: eslint . --ext .js,.jsx,.ts,.ts
+        run: eslint . --ext .js,.jsx,.ts,.ts
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
