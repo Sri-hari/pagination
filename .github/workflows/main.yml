@@ -25,7 +25,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        uses: applibgroup/HarmonyOsSdk@1.7.2
+          LANG: JS
+        uses: applibgroup/HarmonyOs-build@v2.7
       - name: Run ESLint
         run: eslint . --ext .js,.jsx,.ts,.ts
       - name: Upload Artifact
