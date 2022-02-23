@@ -23,7 +23,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         uses: applibgroup/HarmonyOsSdk@1.7.2
       - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        run: eslint . --ext .js,.jsx,.ts,.ts
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
