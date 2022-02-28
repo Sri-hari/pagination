@@ -34,5 +34,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
-          name: assets-for-download
-          path: build\outputs\hap\debug\phone
+          name: assets-for-download/report.json
+          path: ${{ github.workspace }}/report.json
