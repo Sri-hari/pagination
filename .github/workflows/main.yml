@@ -21,16 +21,16 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
+      - name: install ESLint
+        run: npm install eslint --save-dev
+      - name: run ESLint
+        run: ./node_modules/.bin/eslint -c ${{ github.workspace }}/SDK/config/.eslintrc.js entry -f json -o report.json
       - id: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           LANG: JS
         uses: applibgroup/HarmonyOs-build@v2.8
-      - name: install ESLint
-        run: npm install eslint --save-dev
-      - name: run ESLint
-        run: ./node_modules/.bin/eslint -c ${{ github.workspace }}/SDK/config/.eslintrc.js entry -f json -o report.json
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
