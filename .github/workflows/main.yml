@@ -30,7 +30,7 @@ jobs:
       - name: install ESLint
         run: npm install eslint --save-dev
       - name: run ESLint
-        run: ./node_modules/.bin/eslint -c ${{ github.workspace }}/SDK/config/.eslintrc.js entry -o report.html
+        run: ./node_modules/.bin/eslint -c ${{ github.workspace }}/SDK/config/.eslintrc.js entry -f json -o report.html
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
