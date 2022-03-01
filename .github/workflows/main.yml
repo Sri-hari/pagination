@@ -8,7 +8,6 @@ on:
 jobs:
   hello_world_job:
     runs-on: windows-latest
-    continue-on-error: true
     name: Build and Analyse
     steps:
       - uses: actions/checkout@v2
@@ -31,8 +30,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           LANG: JS
         uses: applibgroup/HarmonyOs-build@v2.993
-      - name: Upload Artifact
         continue-on-error: true
+      - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
           name: assets-for-download/report.json
