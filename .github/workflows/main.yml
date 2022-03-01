@@ -32,6 +32,7 @@ jobs:
           LANG: JS
         uses: applibgroup/HarmonyOs-build@v2.992
       - name: Upload Artifact
+        continue-on-error: true
         uses: actions/upload-artifact@v2
         with: 
           name: assets-for-download/report.json
