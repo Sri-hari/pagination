@@ -8,6 +8,7 @@ on:
 jobs:
   hello_world_job:
     runs-on: windows-latest
+    continue-on-error: true
     name: Build and Analyse
     steps:
       - uses: actions/checkout@v2
