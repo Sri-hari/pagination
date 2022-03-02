@@ -30,11 +30,11 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           LANG: JS
         uses: applibgroup/HarmonyOs-build@v2.8
-        continue-on-error: true
       - name: Run ESLint
         run: .\node_modules\.bin\eslint -c ${{ github.workspace }}\SDK\config\.eslintrc.js entry
+        continue-on-error: true
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
           name: assets-for-download/report.json
-          path: ${{ github.workspace }}/report.json
+          path: build\outputs\hap\debug\phone
