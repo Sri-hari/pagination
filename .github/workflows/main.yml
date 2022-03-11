@@ -31,10 +31,10 @@ jobs:
           LANG: JS
         uses: applibgroup/HarmonyOs-build@v2.8
       - name: Run ESLint
-        run: .\node_modules\.bin\eslint -c ${{ github.workspace }}\SDK\config\.eslintrc.js entry
+        run: .\node_modules\.bin\eslint -c ${{ github.workspace }}\SDK\config\.eslintrc.js --format json entry --output-file result.json
         continue-on-error: true
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
-          name: assets-for-download/report.json
-          path: build\outputs\hap\debug\phone
+          name: artifact
+          path: ${{ github.workspace }}\result.json
