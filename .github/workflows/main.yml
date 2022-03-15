@@ -24,7 +24,7 @@ jobs:
           node-version: '14'
       - run: npm install
       - name: install ESLint
-        run: npm install eslint babel-eslint --save-dev
+        run: npm install eslint babel-eslint eslint-plugin-react --save-dev
       - id: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
