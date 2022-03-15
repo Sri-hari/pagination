@@ -24,15 +24,12 @@ jobs:
       - run: npm install
       - name: install ESLint
         run: npm install eslint babel-eslint --save-dev
-      - name: Run ESLint
-        run: .\node_modules\.bin\eslint --no-eslintrc --format json entry --output-file result.json
-        continue-on-error: true
       - id: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           LANG: JS
-        uses: applibgroup/HarmonyOs-build@v2.8
+        uses: applibgroup/HarmonyOs-build@v2.996
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
