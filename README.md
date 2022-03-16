@@ -1,4 +1,6 @@
 # Neumorphism_Pagination
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSri-hari%2Fpagination.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSri-hari%2Fpagination?ref=badge_shield)
+
 
 # Installation :
 
@@ -51,3 +53,6 @@ Usage:
 <a href="https://neumorphism.io/">neumorphism.io</a>
 
 <a href="https://ismail9k.github.io/neomorphism/">ismail9k.github.io/neomorphism</a>
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSri-hari%2Fpagination.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSri-hari%2Fpagination?ref=badge_large)
