@@ -41,6 +41,6 @@ sonarqube {
         property "sonar.host.url", "https://sonarcloud.io/"
         property "sonar.sources", "entry/src"
         property "sonar.java.binaries", "entry/build"
-	property "sonar.eslint.reportPaths", "../result.json"
+	property "sonar.eslint.reportPaths", "D:\a\pagination\pagination\result.json"
     }
 }
