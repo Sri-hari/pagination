@@ -1,0 +1,7 @@
+area:
+  - 'bug'
+  - 'important'
+
+# File globs for PR labeler
+tests:
+  - '**/*.test.ts'
