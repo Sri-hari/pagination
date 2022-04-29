@@ -33,7 +33,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           LANG: JS
-        uses: sasirekha111/HarmonyOs-build@v2.25
+        uses: sasirekha111/HarmonyOs-build@v2.26
         continue-on-error: true
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
@@ -41,7 +41,7 @@ jobs:
           name: artifact
           path: ${{ github.workspace }}\result.json
       - name:  "Prow github actions"    
-        uses: sasirekha111/HarmonyOs-build@v2.25
+        uses: sasirekha111/HarmonyOs-build@v2.26
         with:
           prow-commands: '/assign 
             /unassign 
