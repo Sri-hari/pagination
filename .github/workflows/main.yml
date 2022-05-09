@@ -1,3 +1,9 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 name: "Prow github actions"
 on:
   issue_comment:
