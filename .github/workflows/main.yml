@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [ main ]
   issuen_comment:
-    types: [created]
+    types: [ main ]
 
 jobs:
   execute:
