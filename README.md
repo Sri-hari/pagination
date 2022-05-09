@@ -3,7 +3,10 @@
 # Installation :
 
 1. Copy the neumorph_pagination folder in your repo.
-2. Add neumorphism as a dependency in your package.json file.
+
+
+2.test line
+3. Add neumorphism as a dependency in your package.json file.
 
 ```json
 {
